@@ -1,12 +1,7 @@
 name: Amazon Linux 2
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
   python3:
@@ -16,6 +11,7 @@ jobs:
         molecule_distro:
           - amazonlinux2
         mongodb_version:
+          - '7.0'
           - '4.4'
           - '4.2'
           - '4.0'
